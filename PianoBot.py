@@ -16,18 +16,33 @@ def get_mouse_pos():
 
 
 
-
+time.sleep(2)
 # ============================
 #          MAIN BODY
 # ============================
 # This is where the actual code for the bot will be written
 # Don't worry, it's not complicated, and I'll walk you through it in the workshop anyway :)
-#while True
+while True:
 
-    # COLUMN 1
+  # take and save ss
 
-    # COLUMN 2
+    ss = pyautogui.screenshot("pianotiles.jpeg").convert("RGB")
 
-    # COLUMN 3
+    col1 = 655, 525
+    col2 = 730, 525
+    col3 = 832, 525
+    col4 = 902, 525
 
-    # COLUMN 4
+    col1_colour = ss.getpixel(col1)
+    col2_colour = ss.getpixel(col2)
+    col3_colour = ss.getpixel(col3)
+    col4_colour = ss.getpixel(col4)
+
+    if col1_colour == (0, 0, 0):
+        pyautogui.click(col1)
+    if col2_colour == (0, 0, 0):
+        pyautogui.click(col2)
+    if col3_colour == (0, 0, 0):
+        pyautogui.click(col3)
+    if col4_colour == (0, 0, 0):
+        pyautogui.click(col4)
